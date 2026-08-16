@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <title>Galeria</title>
+  </head>
+  <!-- Cambiado a min-h-screen y añadido fondo oscuro bg-gray-900 -->
+  <body
+    class="min-h-screen w-full font-ubuntu font-semibold text-xs flex flex-col bg-gray-900 text-white"
+  >
+    <!-- CONTENEDOR 1: Bloque de bienvenida (Mide exactamente 100dvh) -->
+    <div class="relative w-full h-screen flex flex-col">
+      <!-- El Video de Fondo: Atrapado de forma absoluta solo en esta primera pantalla -->
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="w-screen h-screen object-cover absolute top-0 left-0 -z-10"
+      >
+        <source src="/src/assets/comidaasiatica.mp4" type="video/mp4" />
+      </video>
+
+      <header>
+        <nav
+          class="relative w-full flex flex-row items-center justify-between p-6 text-white bg-white/5 backdrop-blur-xs border-b border-white/10 shadow-lg z-20"
+        >
+          <!-- Tu Logo -->
+          <img
+            src="/src/assets/logo.jpg"
+            alt="Logo"
+            class="h-12 w-auto ml-20"
+          />
+
+          <!-- Tus Enlaces (Cambiados a text-white para que contrasten en el cristal) -->
+          <ul class="flex flex-row items-center gap-12 mr-20">
+            <li>
+              <a
+                class="hover:text-amber-400 relative text-gray-500 no-underline pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300"
+                href="#"
+                >INICIO</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-amber-400 relative text-gray-500 no-underline pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300"
+                href="#"
+                >PEDIDO ONLINE</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-amber-400 relative text-gray-500 no-underline pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300"
+                href="#"
+                >CANJEAR PUNTOS</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-amber-400 relative text-gray-500 no-underline pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300"
+                href="#"
+                >NUESTROS SERVICIOS</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-amber-400 relative text-gray-500 no-underline pb-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300"
+                href="#"
+                >CONTÁCTENOS</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-gray-500 hover:text-amber-400 transition font-normal flex flex-row items-center gap-2"
+                href="#"
+              >
+                <img class="w-6 h-auto" src="./assets/shop_cart.png" alt="" />
+                Total: <span class="text-amber-400 font-bold">0.00€</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-gray-500 bg-amber-500 hover:bg-amber-600 px-4 py-2 rounded-full font-normal transition-all duration-300 shadow-md"
+                href="#"
+                >Iniciar sesión / Regístrate</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!--DESCUENTO-->
+      <main class="flex items-center justify-center flex-1 p-6">
+        <div
+          class="text-center border border-white/20 bg-white/5 backdrop-blur-sm w-full max-w-2xl h-auto p-10 flex flex-col items-center justify-center gap-4 rounded-xl shadow-2xl"
+        >
+          <h1 class="text-white text-6xl font-bold text-shadow-lg/40">
+            DESCUENTO
+          </h1>
+          <p class="text-white text-base text-shadow-lg/30 leading-relaxed">
+            Todos los pedidos para recoger tienen un
+            <span class="text-2xl text-red-400 font-bold text-shadow-lg/30"
+              >10%</span
+            >
+            de descuento. En los
+            <span class="text-red-400 font-bold"> pedidos a domicilio:</span>
+            por compras a partir de 25€, te regalamos
+            <span class="text-amber-300 text-shadow-lg/30 font-semibold"
+              >1 bebida japonesa ó una cerveza japonesa</span
+            >; con 50€, 2; y así sucesivamente.
+          </p>
+          <h3 class="text-2xl text-white font-medium">Solo en página web</h3>
+          <button
+            class="text-white font-semibold bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white hover:text-black transition-all duration-300 text-lg rounded-full px-6 py-3 cursor-pointer mt-2 shadow-lg"
+          >
+            Pedido online
+          </button>
+        </div>
+      </main>
+    </div>
+    <!-- FIN DEL CONTENEDOR 1 -->
+
+    <!-- CONTENEDOR 2: SECCIÓN DE ANDY SUSHI (Aparece abajo al hacer scroll) -->
+    <section
+      class="w-full max-w-6xl mx-auto px-6 py-32 flex flex-col md:flex-row items-center gap-16 bg-gray-900"
+    >
+      <!-- Bloque de Texto (Izquierda) -->
+      <div class="flex-1 space-y-6">
+        <h2 class="text-4xl font-bold text-blue-400 leading-tight">
+          ¡Bienvenidos a Andy Sushi!
+        </h2>
+        <p class="text-lg font-light text-gray-300 leading-relaxed">
+          Si eres un amante del sushi y buscas una experiencia gastronómica
+          variada y del¡Hola! Te damos la bienvenida a ANDY SUSHI, tu tienda de
+          sushi para llevar favorita. Somos un establecimiento especializado en
+          sushi fresco y delicioso, preparado al momento para que disfrutes de
+          la auténtica experiencia japonesa desde la comodidad de tu hogar,
+          oficina o donde prefieras.
+        </p>
+        <p class="text-lg font-light text-gray-300 leading-relaxed">
+          En ANDY SUSHI, nos apasiona ofrecerte los sabores más frescos y
+          auténticos. Utilizamos ingredientes de primera calidad, desde pescados
+          frescos hasta vegetales seleccionados, para garantizar que cada bocado
+          sea una explosión de sabor. Nuestro menú incluye una amplia variedad
+          de opciones, desde los clásicos rolls como el California Roll, el
+          Spicy Tuna o el Sashimi, hasta creaciones únicas y especiales
+          diseñadas por nuestros talentosos chefs.
+        </p>
+      </div>
+
+      <!-- Bloque de Imágenes tipo Collage (Derecha) -->
+      <div class="flex-1 grid grid-cols-2 gap-4 w-full">
+        <img
+          class="w-full h-96 object-cover rounded-2xl row-span-2"
+          src="./assets/inari.webp"
+          alt="Inari Sushi"
+        />
+        <img
+          class="w-full h-44 object-cover rounded-2xl"
+          src="./assets/urumaki.webp"
+          alt="Urumaki Roll"
+        />
+        <img
+          class="w-full h-44 object-cover rounded-2xl"
+          src="./assets/maki3.webp"
+          alt="Maki Sushi"
+        />
+      </div>
+    </section>
+
+    <!--otra section-->
+
+    <section
+      class="w-full max-w-5xl mx-auto mb-40 px-5 py-5 min-h-100 flex items-center justify-center bg-blue-100 flex-col rounded-xl"
+    >
+      <h1 class="text-mauve-700 text-8xl font-vibes font-medium">
+        ¿Por qué elegirnos?
+      </h1>
+      <p class="w-dvh text-lg text-mauve-500 font-extralight font-ubuntu mt-5">
+        Calidad premium: Trabajamos con proveedores de confianza para asegurar
+        la frescura de nuestros ingredientes. - Preparación rápida: Sabemos que
+        tu tiempo es valioso, por eso preparamos tu pedido con agilidad sin
+        comprometer la calidad. - Variedad: Ofrecemos opciones para todos los
+        gustos, incluyendo sushi vegetariano, opciones bajas en calorías y
+        platos combinados. - Facilidad de pedido: Puedes hacer tu pedido por
+        teléfono, a través de nuestra página web o en nuestras redes sociales.
+        ¡Tú eliges!
+      </p>
+      <div class="flex flex-row gap-5 w-full items-center justify-center mt-10">
+        <img
+          class="size-50 object-cover rounded-2xl"
+          src="./assets/nigiri.jpg"
+          alt="nigiri"
+        />
+        <img
+          class="size-50 object-cover rounded-2xl"
+          src="./assets/nigiri2.webp"
+          alt="nigiri"
+        />
+        <img
+          class="size-50 object-cover rounded-2xl"
+          src="./assets/maki2.webp"
+          alt="nigiri"
+        />
+      </div>
+      <button
+        class="text-gray-600 font-semibold mt-10 bg-red-400/30 backdrop-blur-md border border-white/30 hover:bg-white hover:text-black transition-all duration-300 text-lg rounded-full px-6 py-3 cursor-pointer shadow-lg"
+      >
+        MÁS MENÚ
+      </button>
+    </section>
+    <!--SEction-->
+    <!-- Cambiado h-screen por min-h-screen para que el contenedor crezca con las 9 fotos -->
+    <section
+      class="relative w-full min-h-screen flex items-center justify-center p-6 mt-20"
+    >
+      <!-- 1. Imagen de Fondo: Cambiado h-full por h-full absoluto real para que estire según el contenido -->
+      <img
+        class="w-full h-full object-cover absolute top-0 left-0 -z-10"
+        src="./assets/urumaki3.jpg"
+        alt="Fondo Urumaki"
+      />
+
+      <!-- 2. Contenedor de la Galería -->
+      <div
+        class="w-full max-w-7xl bg-black/40 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl z-10 my-10"
+      >
+        <!-- Cambiado a font-vibes (¡tu hermosa fuente cursiva!) y corregido el doble mb-6 -->
+        <h2
+          class="text-white opacity-85 text-6xl font-vibes font-medium text-center tracking-wide mb-10"
+        >
+          Platos para degustar y seleccionar
+        </h2>
+
+        <!-- Corregido el grid responsive: 1 col en móvil, 2 en tablet, 4 en PC para que no se aplaste -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/chirashi.jpg"
+            alt="Chirashi"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/chirashi3.png"
+            alt="Chirashi 3"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/inari.webp"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/maki.webp"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/maki2.webp"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/maki3.webp"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/sashimi.webp"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/temaki3.jpg"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/sashimi2.jpg"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/urumaki4.jpg"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/temakisalmon2.jpg"
+            alt="Inari"
+          />
+          <img
+            class="w-full h-40 object-cover rounded-2xl shadow-md hover:scale-105 transition-transform duration-300"
+            src="./assets/temakisalmon.jpg"
+            alt="Inari"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--footer-->
+    <footer class="w-full bg-gray-900 border-t border-white/10 text-white font-cascadia py-16">
+  <!-- Contenedor principal con un ancho máximo controlado y padding elegante -->
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+
+    <!-- Columna 1: Logo e Info -->
+    <div class="space-y-4">
+      <img class="h-12 w-auto" src="./assets/logo.jpg" alt="Andy Sushi Logo">
+      <p class="text-gray-400 text-sm leading-relaxed">
+        En Andy Sushi, puedes disfrutar de un festín sin límites, explorando 
+        diferentes tipos de sushi y platos japoneses en un ambiente acogedor y moderno.
+      </p>
+    </div>
+
+    <!-- Columna 2: Categorías (Convertido a lista real) -->
+    <div class="space-y-4">
+      <h4 class="text-xl font-bold text-white">Categorías de menú</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a class="hover:text-white transition" href="#">Oferta</a></li>
+        <li><a class="hover:text-white transition" href="#">Entrantes</a></li>
+        <li><a class="hover:text-white transition" href="#">Poke</a></li>
+        <li><a class="hover:text-white transition" href="#">Chirashi</a></li>
+        <li><a class="hover:text-white transition" href="#">Sashimi</a></li>
+        <li><a class="hover:text-white transition" href="#">Tartar</a></li>
+        <li><a class="hover:text-white transition" href="#">Nigiri (2 Piezas)</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Links Rápidos (Convertido a lista real) -->
+    <div class="space-y-4">
+      <h4 class="text-xl font-bold text-g">Links rápidos</h4>
+      <ul class="space-y-2 text-white text-sm">
+        <li><a class="hover:text-green-200 transition" href="#">Pedido online</a></li>
+        <li><a class="hover:text-green-200 transition" href="#">Nuestros Servicios</a></li>
+        <li><a class="hover:text-green-200 transition" href="#">Contáctanos</a></li>
+        <li><a class="hover:text-green-200 transition" href="#">Política de venta y cancelación</a></li>
+        <li><a class="hover:text-green-200 transition" href="#">Preguntas frecuentes</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 4: Contacto -->
+    <div class="space-y-4">
+      <h4 class="text-xl font-bold text-white">Contáctanos</h4>
+      <address class="not-italic space-y-3 text-gray-400 text-sm">
+        <p class="leading-relaxed">📍 Av. de la Universidad, 9999, 28913 Leganés, Madrid</p>
+        <p>📞 000000 / 9999999</p>
+        <p>🌐 <a class="text-g hover:underline" href="#">andyelchulo.com</a></p>
+        <div class="pt-2 border-t border-white/5 text-xs space-y-1">
+          <p class="font-bold text-white">Horario:</p>
+          <p>De 12:30 a 16:30 y 20:30 a 23:45</p>
+          <p class="text-red-400">Cerramos los lunes (Excepto festivos)</p>
+        </div>
+      </address>
+    </div>
+
+  </div>
+</footer>
+
+</html>
