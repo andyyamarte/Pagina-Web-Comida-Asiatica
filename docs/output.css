@@ -26,8 +26,6 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-2xs: 18rem;
-    --container-xs: 20rem;
     --container-sm: 24rem;
     --container-md: 28rem;
     --container-lg: 32rem;
@@ -1567,8 +1565,8 @@
     .\32 xl\:max-w-4xl {
       max-width: var(--container-4xl);
     }
-    .\32 xl\:max-w-\[90rem\] {
-      max-width: 90rem;
+    .\32 xl\:max-w-360 {
+      max-width: calc(var(--spacing) * 360);
     }
     .\32 xl\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
